@@ -1,0 +1,31 @@
+{
+  "name": "cashfree-payment-gateway",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Minimal Cashfree Payment Gateway",
+  "scripts": {
+    "install:all": "npm install",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "typecheck": "npm run typecheck:backend && npm run typecheck:frontend",
+    "typecheck:backend": "cd backend && npm run typecheck",
+    "typecheck:frontend": "cd frontend && npm run typecheck",
+    "lint": "npm run lint:backend && npm run lint:frontend",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

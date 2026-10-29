@@ -1,0 +1,40 @@
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'node',
+    include: ['tests/**/*.test.ts'],
+    setupFiles: ['./tests/setup.ts'],
+    testTimeout: 30000,
+    hookTimeout: 120000,
+    env: {
+      NODE_ENV: 'test',
+      JWT_ACCESS_SECRET: 'test_access_secret_do_not_use_in_production',
+      JWT_REFRESH_SECRET: 'test_refresh_secret_do_not_use_in_production',
+      JWT_ACCESS_EXPIRES_IN: '15m',
+      JWT_REFRESH_EXPIRES_IN: '7d',
+      COOKIE_DOMAIN: 'localhost',
+      COOKIE_SECURE: 'false',
+      COOKIE_SAME_SITE: 'lax',
+      DEFAULT_CURRENCY: 'INR',
+      MIN_ORDER_AMOUNT_MINOR: '100',
+      MAX_ORDER_AMOUNT_MINOR: '100000000',
+      CASHFREE_APP_ID: 'test_app_id',
+      CASHFREE_SECRET_KEY: 'test_secret_key',
+      CASHFREE_API_VERSION: '2025-08-01',
+      CASHFREE_ENVIRONMENT: 'sandbox',
+      CASHFREE_WEBHOOK_URL: 'http://localhost:4000/api/v1/webhooks/cashfree',
+      CASHFREE_WEBHOOK_SECRET: 'test_webhook_secret',
+      MAX_FILE_SIZE_MB: '5',
+      ENABLE_GUEST_CHECKOUT: 'true',
+      ENABLE_REFUNDS: 'true',
+      CLIENT_URL: 'http://localhost:5173',
+      ALLOWED_ORIGINS: 'http://localhost:5173',
+      PORT: '4000',
+    },
+  },
+  optimizeDeps: {
+    include: ['cookie-parser', 'bcryptjs', 'jsonwebtoken', 'mongoose'],
+  },
+});
