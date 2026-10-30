@@ -8,7 +8,7 @@ import paymentRoutes from "./routes/payments.js";
 import { cashfreeWebhook } from "./controllers/webhook.controller.js";
 import rateLimit from "express-rate-limit";
 import { connectDb } from "./config/db.js";
-export async function createApp() {
+export function createApp() {
   const app = express();
   app.set("trust proxy", 1);
   app.use(
@@ -33,6 +33,9 @@ export async function createApp() {
     max: 100,
   });
   app.use(limiter);
+
+  connectDb();
+
   app.use((req, res, next) => {
     if (req.path === "/api/webhooks/cashfree") {
       next();
@@ -70,8 +73,6 @@ export async function createApp() {
     },
     cashfreeWebhook,
   );
-
-  await connectDb();
 
   app.use("/api/payments", paymentRoutes);
   app.use((_req, res) => {
