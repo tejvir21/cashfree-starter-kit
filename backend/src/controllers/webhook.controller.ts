@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { cashfreeAdapter } from '../services/cashfree';
-import { ordersStore } from './payment.controller';
+import { ordersStore } from './payment.controller.js';
 export async function cashfreeWebhook(req, res) {
     const rawBody = req.rawBody ?? '';
     const signature = req.headers['x-webhook-signature'];

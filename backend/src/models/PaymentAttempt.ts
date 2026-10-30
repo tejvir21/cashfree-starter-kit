@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { PaymentVerificationStatus, CURRENCIES, } from './constants';
+import { PaymentVerificationStatus, CURRENCIES, } from './constants.js';
 const paymentAttemptSchema = new Schema({
     internalPaymentId: {
         type: String,

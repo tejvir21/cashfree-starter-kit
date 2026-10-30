@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { UserRole } from './constants';
+import { UserRole } from './constants.js';
 const userSchema = new Schema({
     name: { type: String, required: true, trim: true, maxlength: 100 },
     email: {

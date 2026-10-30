@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { RefundStatus, CURRENCIES } from './constants';
+import { RefundStatus, CURRENCIES } from './constants.js';
 const refundSchema = new Schema({
     internalRefundId: {
         type: String,

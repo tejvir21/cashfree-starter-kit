@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { ProductType, CURRENCIES } from './constants';
+import { ProductType, CURRENCIES } from './constants.js';
 const variantSchema = new Schema({
     name: { type: String, required: true, trim: true },
     priceMinor: { type: Number, required: true, min: 0, integer: true },

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, CURRENCIES, } from './constants';
+import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, CURRENCIES, } from './constants.js';
 const orderItemSchema = new Schema({
     productId: { type: Schema.Types.ObjectId, ref: 'Product', required: true, index: true },
     productSnapshot: {

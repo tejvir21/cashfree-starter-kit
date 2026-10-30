@@ -2,12 +2,12 @@
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
-import { errorHandler } from "../src/middleware/error";
-import { env } from "../src/config/env";
-import paymentRoutes from "../src/routes/payments";
-import { cashfreeWebhook } from "../src/controllers/webhook.controller";
+import { errorHandler } from "../src/middleware/error.js";
+import { env } from "../src/config/env.js";
+import paymentRoutes from "../src/routes/payments.js";
+import { cashfreeWebhook } from "../src/controllers/webhook.controller.js";
 import rateLimit from "express-rate-limit";
-import { connectDb } from "../src/config/db";
+import { connectDb } from "../src/config/db.js";
 
 declare global {
   namespace Express {

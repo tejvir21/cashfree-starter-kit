@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { ZodError } from 'zod';
-import { errorHandler } from './error';
+import { errorHandler } from './error.js';
 export function validateBody(schema) {
     return (req, res, next) => {
         try {

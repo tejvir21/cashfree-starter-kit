@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose from 'mongoose';
-import { env } from './env';
+import { env } from './env.js';
 let _connection = null;
 export async function connectDb() {
     if (_connection)

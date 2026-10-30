@@ -1,6 +1,6 @@
 // @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
-import { WebhookProcessingStatus } from './constants';
+import { WebhookProcessingStatus } from './constants.js';
 const webhookEventSchema = new Schema({
     externalId: { type: String, required: true, unique: true, index: true },
     eventType: { type: String, required: true, index: true },

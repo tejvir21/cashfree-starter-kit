@@ -2,12 +2,12 @@
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
-import { errorHandler } from "./middleware/error";
-import { env } from "./config/env";
-import paymentRoutes from "./routes/payments";
-import { cashfreeWebhook } from "./controllers/webhook.controller";
+import { errorHandler } from "./middleware/error.js";
+import { env } from "./config/env.js";
+import paymentRoutes from "./routes/payments.js";
+import { cashfreeWebhook } from "./controllers/webhook.controller.js";
 import rateLimit from "express-rate-limit";
-import { connectDb } from "./config/db";
+import { connectDb } from "./config/db.js";
 export async function createApp() {
   const app = express();
   app.set("trust proxy", 1);
