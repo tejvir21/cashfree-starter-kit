@@ -8,9 +8,9 @@
  * Monetary amounts are integer minor units. The app (MongoDB) is the source of truth
  * for orders; Cashfree is authoritative for gateway payment status.
  */
-import { Order, PaymentAttempt, Refund, Product, } from '../models.js';
+import { Order, PaymentAttempt, Refund, Product, } from '../models/index.js';
 import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, PaymentVerificationStatus, RefundStatus, canTransitionOrder, } from '../models/constants.js';
-import { cashfreeAdapter, buildIntentResult, } from '../services/cashfree.js';
+import { cashfreeAdapter, buildIntentResult, } from '../services/cashfree/index.js';
 import { env } from '../config/env.js';
 import { createAuditLog } from '../utils/audit-log.js';
 import { generateId } from '../utils/id.js';

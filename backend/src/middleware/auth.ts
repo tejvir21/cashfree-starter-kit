@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { verifyAccessToken } from '../utils/tokens.js';
-import { User } from '../models.js';
+import { User } from '../models/index.js';
 import { env } from '../config/env.js';
 import { COOKIE_NAMES } from '../utils/tokens.js';
 const BEARER = /^Bearer\s+(.+)$/i;

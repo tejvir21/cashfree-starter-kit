@@ -1,7 +1,7 @@
 // @ts-nocheck
 import bcrypt from 'bcryptjs';
 import { signAccessToken, signRefreshToken, verifyRefreshToken, setAuthCookies, clearAuthCookies, } from '../utils/tokens.js';
-import { User } from '../models.js';
+import { User } from '../models/index.js';
 import { createAuditLog } from '../utils/audit-log.js';
 import { generateId } from '../utils/id.js';
 const SALT_ROUNDS = 12;

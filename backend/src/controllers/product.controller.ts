@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Product } from '../models.js';
+import { Product } from '../models/index.js';
 import { createAuditLog } from '../utils/audit-log.js';
 export async function listProducts(req, res) {
     const { page = 1, limit = 20, search, category, type, isActive, minPrice, maxPrice, } = req.query;

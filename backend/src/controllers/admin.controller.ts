@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Order, PaymentAttempt, Refund, ApplicationSettings, AuditLog, WebhookEvent, } from '../models.js';
+import { Order, PaymentAttempt, Refund, ApplicationSettings, AuditLog, WebhookEvent, } from '../models/index.js';
 import { OrderStatus, OrderPaymentStatus } from '../models/constants.js';
 import { createAuditLog } from '../utils/audit-log.js';
 import { reconcilePayment } from '../services/payment.service.js';

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Order } from '../models.js';
+import { Order } from '../models/index.js';
 import { OrderStatus, OrderPaymentStatus } from '../models/constants.js';
 import { createCheckout } from '../services/payment.service.js';
 import { createAuditLog } from '../utils/audit-log.js';
