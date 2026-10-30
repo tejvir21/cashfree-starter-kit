@@ -1,9 +1,9 @@
 // @ts-nocheck
-import { Order } from '../models';
-import { OrderStatus, OrderPaymentStatus } from '../models/constants';
-import { createCheckout } from '../services/payment.service';
-import { createAuditLog } from '../utils/audit-log';
-import { generateOrderNumber } from '../utils/id';
+import { Order } from '../models.js';
+import { OrderStatus, OrderPaymentStatus } from '../models/constants.js';
+import { createCheckout } from '../services/payment.service.js';
+import { createAuditLog } from '../utils/audit-log.js';
+import { generateOrderNumber } from '../utils/id.js';
 export async function createOrder(req, res) {
     const { customerName, customerEmail, customerPhone, customerNotes, items, idempotencyKey, } = req.body;
     // Build a deterministic idempotency key from order content if none provided.

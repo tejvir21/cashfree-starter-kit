@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { Router } from 'express';
-import * as productController from '../controllers/product.controller';
-import { productQuerySchema, productCreateSchema, productUpdateSchema, productParamsSchema, } from '../validators/product';
-import { authenticate, requireRole } from '../middleware/auth';
-import { csrfProtection } from '../middleware/csrf';
-import { validateQuery, validateBody, validateParams } from '../middleware/validation';
+import * as productController from '../controllers/product.controller.js';
+import { productQuerySchema, productCreateSchema, productUpdateSchema, productParamsSchema, } from '../validators/product.js';
+import { authenticate, requireRole } from '../middleware/auth.js';
+import { csrfProtection } from '../middleware/csrf.js';
+import { validateQuery, validateBody, validateParams } from '../middleware/validation.js';
 const router = Router();
 // Public catalog
 router.get('/', validateQuery(productQuerySchema), productController.listProducts);

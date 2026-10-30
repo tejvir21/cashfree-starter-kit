@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { cashfreeAdapter } from "../services/cashfree";
-import { env, MIN_PAYMENT_AMOUNT, MAX_PAYMENT_AMOUNT } from "../config/env";
+import { cashfreeAdapter } from "../services/cashfree.js";
+import { env, MIN_PAYMENT_AMOUNT, MAX_PAYMENT_AMOUNT } from "../config/env.js";
 import { randomUUID } from "crypto";
 function validateCreateOrder(body) {
   const { name, email, phone, amount } = body;

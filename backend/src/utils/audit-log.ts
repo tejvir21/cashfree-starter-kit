@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { AuditLog } from '../models';
+import { AuditLog } from '../models.js';
 /**
  * Create an audit log entry. Sensitive fields are redacted before storage.
  */

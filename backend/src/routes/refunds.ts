@@ -1,11 +1,11 @@
 // @ts-nocheck
 import { Router } from 'express';
-import * as refundController from '../controllers/refund.controller';
-import { refundCreateSchema, refundParamsSchema, } from '../validators/payment';
-import { orderParamsSchema } from '../validators/order';
-import { authenticate, requireRole } from '../middleware/auth';
-import { csrfProtection } from '../middleware/csrf';
-import { validateParams, validateBody } from '../middleware/validation';
+import * as refundController from '../controllers/refund.controller.js';
+import { refundCreateSchema, refundParamsSchema, } from '../validators/payment.js';
+import { orderParamsSchema } from '../validators/order.js';
+import { authenticate, requireRole } from '../middleware/auth.js';
+import { csrfProtection } from '../middleware/csrf.js';
+import { validateParams, validateBody } from '../middleware/validation.js';
 const router = Router();
 // Create a refund for an order (admin)
 router.post('/orders/:orderId/refunds', authenticate, requireRole('ADMIN'), validateParams(orderParamsSchema), validateBody(refundCreateSchema), csrfProtection, refundController.createRefund);

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { z } from 'zod';
-import { CURRENCIES, PRODUCT_TYPES } from '../models/constants';
+import { CURRENCIES, PRODUCT_TYPES } from '../models/constants.js';
 const CURRENCY_ENUM = CURRENCIES;
 const TYPE_ENUM = PRODUCT_TYPES;
 export const productQuerySchema = z.object({

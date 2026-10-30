@@ -1,7 +1,7 @@
 // @ts-nocheck
-import { initiateRefund, reconcileRefund, } from '../services/payment.service';
-import { Refund, Order, PaymentAttempt } from '../models';
-import { createAuditLog } from '../utils/audit-log';
+import { initiateRefund, reconcileRefund, } from '../services/payment.service.js';
+import { Refund, Order, PaymentAttempt } from '../models.js';
+import { createAuditLog } from '../utils/audit-log.js';
 export async function createRefund(req, res) {
     if (req.user?.role !== 'ADMIN') {
         res.status(403).json({ error: 'Forbidden', message: 'Admin only' });

@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { cashfreeAdapter } from '../services/cashfree';
+import { cashfreeAdapter } from '../services/cashfree.js';
 import { ordersStore } from './payment.controller.js';
 export async function cashfreeWebhook(req, res) {
     const rawBody = req.rawBody ?? '';

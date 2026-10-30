@@ -1,6 +1,6 @@
 // @ts-nocheck
 import jwt from 'jsonwebtoken';
-import { env } from '../config/env';
+import { env } from '../config/env.js';
 const accessSignOptions = {
     expiresIn: env.JWT_ACCESS_EXPIRES_IN,
     issuer: 'cashfree-commerce',

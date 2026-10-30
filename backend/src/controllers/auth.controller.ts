@@ -1,9 +1,9 @@
 // @ts-nocheck
 import bcrypt from 'bcryptjs';
-import { signAccessToken, signRefreshToken, verifyRefreshToken, setAuthCookies, clearAuthCookies, } from '../utils/tokens';
-import { User } from '../models';
-import { createAuditLog } from '../utils/audit-log';
-import { generateId } from '../utils/id';
+import { signAccessToken, signRefreshToken, verifyRefreshToken, setAuthCookies, clearAuthCookies, } from '../utils/tokens.js';
+import { User } from '../models.js';
+import { createAuditLog } from '../utils/audit-log.js';
+import { generateId } from '../utils/id.js';
 const SALT_ROUNDS = 12;
 function userPayload(user) {
     return { userId: user._id, email: user.email, role: user.role };

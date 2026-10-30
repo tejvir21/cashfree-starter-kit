@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { Router } from 'express';
-import * as orderController from '../controllers/order.controller';
-import { orderQuerySchema, orderCreateSchema, orderParamsSchema, orderCancelSchema, orderTimelineQuerySchema, } from '../validators/order';
-import { authenticate, optionalAuthenticate } from '../middleware/auth';
-import { csrfProtection } from '../middleware/csrf';
-import { validateQuery, validateBody, validateParams } from '../middleware/validation';
+import * as orderController from '../controllers/order.controller.js';
+import { orderQuerySchema, orderCreateSchema, orderParamsSchema, orderCancelSchema, orderTimelineQuerySchema, } from '../validators/order.js';
+import { authenticate, optionalAuthenticate } from '../middleware/auth.js';
+import { csrfProtection } from '../middleware/csrf.js';
+import { validateQuery, validateBody, validateParams } from '../middleware/validation.js';
 const router = Router();
 // Create order (authenticated or guest)
 router.post('/', optionalAuthenticate, csrfProtection, validateBody(orderCreateSchema), orderController.createOrder);

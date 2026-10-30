@@ -8,12 +8,12 @@
  * Monetary amounts are integer minor units. The app (MongoDB) is the source of truth
  * for orders; Cashfree is authoritative for gateway payment status.
  */
-import { Order, PaymentAttempt, Refund, Product, } from '../models';
-import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, PaymentVerificationStatus, RefundStatus, canTransitionOrder, } from '../models/constants';
-import { cashfreeAdapter, buildIntentResult, } from '../services/cashfree';
-import { env } from '../config/env';
-import { createAuditLog } from '../utils/audit-log';
-import { generateId } from '../utils/id';
+import { Order, PaymentAttempt, Refund, Product, } from '../models.js';
+import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, PaymentVerificationStatus, RefundStatus, canTransitionOrder, } from '../models/constants.js';
+import { cashfreeAdapter, buildIntentResult, } from '../services/cashfree.js';
+import { env } from '../config/env.js';
+import { createAuditLog } from '../utils/audit-log.js';
+import { generateId } from '../utils/id.js';
 /**
  * Create an order and a payment attempt, then create a Cashfree order.
  * Returns client-safe checkout info (never secrets).

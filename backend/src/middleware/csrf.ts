@@ -1,7 +1,7 @@
 // @ts-nocheck
-import { compareCsrfToken } from '../utils/csrf';
-import { COOKIE_NAMES } from '../utils/tokens';
-import { env } from '../config/env';
+import { compareCsrfToken } from '../utils/csrf.js';
+import { COOKIE_NAMES } from '../utils/tokens.js';
+import { env } from '../config/env.js';
 /**
  * CSRF protection for state-changing requests.
  * The client reads the `cf_csrf_token` cookie and sends it back via the

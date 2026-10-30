@@ -1,10 +1,10 @@
 // @ts-nocheck
 import { Router } from 'express';
-import * as adminController from '../controllers/admin.controller';
-import { authenticate, requireRole } from '../middleware/auth';
-import { csrfProtection } from '../middleware/csrf';
-import { validateParams, validateQuery } from '../middleware/validation';
-import { adminOrderQuerySchema, adminTransactionQuerySchema, adminRefundQuerySchema, reconcileOrderParamsSchema, } from '../validators/admin';
+import * as adminController from '../controllers/admin.controller.js';
+import { authenticate, requireRole } from '../middleware/auth.js';
+import { csrfProtection } from '../middleware/csrf.js';
+import { validateParams, validateQuery } from '../middleware/validation.js';
+import { adminOrderQuerySchema, adminTransactionQuerySchema, adminRefundQuerySchema, reconcileOrderParamsSchema, } from '../validators/admin.js';
 const router = Router();
 // All admin routes require authentication + ADMIN role
 router.use(authenticate, requireRole('ADMIN'));

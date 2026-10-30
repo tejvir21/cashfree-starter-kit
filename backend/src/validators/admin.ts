@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { z } from 'zod';
-import { CURRENCIES } from '../models/constants';
+import { CURRENCIES } from '../models/constants.js';
 const CURRENCY_ENUM = CURRENCIES;
 export const settingsPatchSchema = z.object({
     defaultCurrency: z.enum(CURRENCY_ENUM).optional(),

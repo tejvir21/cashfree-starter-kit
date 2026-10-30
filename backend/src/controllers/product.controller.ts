@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { Product } from '../models';
-import { createAuditLog } from '../utils/audit-log';
+import { Product } from '../models.js';
+import { createAuditLog } from '../utils/audit-log.js';
 export async function listProducts(req, res) {
     const { page = 1, limit = 20, search, category, type, isActive, minPrice, maxPrice, } = req.query;
     const filter = {};

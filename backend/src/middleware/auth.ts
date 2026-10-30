@@ -1,8 +1,8 @@
 // @ts-nocheck
-import { verifyAccessToken } from '../utils/tokens';
-import { User } from '../models';
-import { env } from '../config/env';
-import { COOKIE_NAMES } from '../utils/tokens';
+import { verifyAccessToken } from '../utils/tokens.js';
+import { User } from '../models.js';
+import { env } from '../config/env.js';
+import { COOKIE_NAMES } from '../utils/tokens.js';
 const BEARER = /^Bearer\s+(.+)$/i;
 export function getTokenFromRequest(req) {
     // Prefer HttpOnly access cookie; fall back to Authorization header.

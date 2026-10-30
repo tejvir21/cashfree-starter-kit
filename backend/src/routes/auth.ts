@@ -1,9 +1,9 @@
 // @ts-nocheck
 import { Router } from 'express';
-import * as authController from '../controllers/auth.controller';
-import { registerSchema, loginSchema, refreshSchema, } from '../validators/auth';
-import { authenticate } from '../middleware/auth';
-import { validateBody } from '../middleware/validation';
+import * as authController from '../controllers/auth.controller.js';
+import { registerSchema, loginSchema, refreshSchema, } from '../validators/auth.js';
+import { authenticate } from '../middleware/auth.js';
+import { validateBody } from '../middleware/validation.js';
 const router = Router();
 // Public registration (CUSTOMER only; ADMIN via provisioning script)
 router.post('/register', validateBody(registerSchema), authController.register);

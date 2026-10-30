@@ -2,7 +2,7 @@
 /**
  * Cashfree Payments adapter.
  */
-import { env, cashfreeConfigured } from '../../config/env';
+import { env, cashfreeConfigured } from '../../config/env.js';
 const BASE_URLS = {
     sandbox: 'https://sandbox.cashfree.com/pg',
     production: 'https://api.cashfree.com/pg',
