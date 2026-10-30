@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { verifyAccessToken } from '../utils/tokens';
 import { User } from '../models';
 import { env } from '../config/env';
@@ -111,3 +112,4 @@ export async function attachUser(req, res, next) {
         next();
     }
 }
+

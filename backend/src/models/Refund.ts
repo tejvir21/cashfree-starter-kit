@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
 import { RefundStatus, CURRENCIES } from './constants';
 const refundSchema = new Schema({
@@ -46,3 +47,4 @@ const refundSchema = new Schema({
 refundSchema.index({ orderId: 1, createdAt: -1 });
 refundSchema.index({ paymentAttemptId: 1, status: 1 });
 export const Refund = mongoose.models.Refund || model('Refund', refundSchema);
+

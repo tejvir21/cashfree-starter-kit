@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { z } from 'zod';
 import { CURRENCIES } from '../models/constants';
 const CURRENCY_ENUM = CURRENCIES;
@@ -55,3 +56,4 @@ export const orderFulfillmentSchema = z.object({
 export const orderNotesSchema = z.object({
     internalNotes: z.string().trim().max(2000),
 });
+

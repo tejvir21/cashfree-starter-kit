@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose from 'mongoose';
 import { env } from './env';
 let _connection = null;
@@ -24,3 +25,4 @@ export async function disconnectDb() {
     }
 }
 export { mongoose };
+

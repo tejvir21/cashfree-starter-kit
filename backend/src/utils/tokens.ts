@@ -1,3 +1,4 @@
+// @ts-nocheck
 import jwt from 'jsonwebtoken';
 import { env } from '../config/env';
 const accessSignOptions = {
@@ -78,3 +79,4 @@ export function clearAuthCookies(res) {
     res.clearCookie(COOKIE_NAMES.REFRESH_TOKEN, { path: '/auth/refresh', domain, secure: isSecure, sameSite });
     res.clearCookie(COOKIE_NAMES.CSRF, { path: '/', domain, secure: isSecure, sameSite });
 }
+

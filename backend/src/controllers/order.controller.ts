@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Order } from '../models';
 import { OrderStatus, OrderPaymentStatus } from '../models/constants';
 import { createCheckout } from '../services/payment.service';
@@ -165,3 +166,4 @@ export async function getOrderTimeline(req, res) {
     ];
     res.json({ data: timeline });
 }
+

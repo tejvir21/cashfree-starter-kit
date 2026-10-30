@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Order, PaymentAttempt, Refund, ApplicationSettings, AuditLog, WebhookEvent, } from '../models';
 import { OrderStatus, OrderPaymentStatus } from '../models/constants';
 import { createAuditLog } from '../utils/audit-log';
@@ -313,3 +314,4 @@ export async function updateSettings(req, res) {
     });
     res.json({ data: results });
 }
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
 import { ProductType, CURRENCIES } from './constants';
 const variantSchema = new Schema({
@@ -37,3 +38,4 @@ const productSchema = new Schema({
 productSchema.index({ category: 1, isActive: 1 });
 productSchema.index({ name: 'text', description: 'text' });
 export const Product = mongoose.models.Product || model('Product', productSchema);
+

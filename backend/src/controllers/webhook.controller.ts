@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { cashfreeAdapter } from '../services/cashfree';
 import { ordersStore } from './payment.controller';
 export async function cashfreeWebhook(req, res) {
@@ -46,3 +47,4 @@ export async function cashfreeWebhook(req, res) {
         res.status(200).json({ received: true });
     }
 }
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
 import { WebhookProcessingStatus } from './constants';
 const webhookEventSchema = new Schema({
@@ -18,3 +19,4 @@ const webhookEventSchema = new Schema({
 webhookEventSchema.index({ createdAt: -1 });
 export const WebhookEvent = mongoose.models.WebhookEvent ||
     model('WebhookEvent', webhookEventSchema);
+

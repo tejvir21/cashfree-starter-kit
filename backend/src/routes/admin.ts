@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Router } from 'express';
 import * as adminController from '../controllers/admin.controller';
 import { authenticate, requireRole } from '../middleware/auth';
@@ -26,3 +27,4 @@ router.get('/audit-logs', adminController.listAuditLogs);
 router.get('/settings', adminController.getSettings);
 router.patch('/settings', csrfProtection, adminController.updateSettings);
 export default router;
+

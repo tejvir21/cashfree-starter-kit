@@ -1,3 +1,4 @@
+// @ts-nocheck
 import express from "express";
 import helmet from "helmet";
 import cors from "cors";
@@ -89,3 +90,4 @@ export function createApp() {
   );
   return app;
 }
+

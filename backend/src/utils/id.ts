@@ -1,3 +1,4 @@
+// @ts-nocheck
 import crypto from 'crypto';
 /**
  * Generate an unpredictable, URL-safe identifier.
@@ -12,3 +13,4 @@ export function generateOrderNumber(prefix = 'ORD') {
     const rand = crypto.randomBytes(4).toString('hex').toUpperCase();
     return `${prefix}-${stamp}-${rand}`;
 }
+

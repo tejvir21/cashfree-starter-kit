@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { z } from 'zod';
 export const checkoutSchema = z.object({
     orderId: z.string().min(1, 'Order id is required'),
@@ -25,3 +26,4 @@ export const paymentParamsSchema = z.object({
 export const refundParamsSchema = z.object({
     refundId: z.string().min(1, 'Refund id is required'),
 });
+

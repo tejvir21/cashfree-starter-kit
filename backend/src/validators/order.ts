@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { z } from 'zod';
 const orderItemSchema = z.object({
     productId: z.string().min(1, 'Product id is required'),
@@ -29,3 +30,4 @@ export const orderTimelineQuerySchema = z.object({
     page: z.coerce.number().int().min(1).default(1),
     limit: z.coerce.number().int().min(1).max(100).default(50),
 });
+

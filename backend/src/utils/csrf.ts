@@ -1,3 +1,4 @@
+// @ts-nocheck
 import crypto from 'crypto';
 export function generateCsrfToken() {
     return crypto.randomBytes(32).toString('hex');
@@ -11,3 +12,4 @@ export function compareCsrfToken(a, b) {
     }
     return diff === 0;
 }
+

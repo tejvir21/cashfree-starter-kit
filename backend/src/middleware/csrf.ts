@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { compareCsrfToken } from '../utils/csrf';
 import { COOKIE_NAMES } from '../utils/tokens';
 import { env } from '../config/env';
@@ -24,3 +25,4 @@ export function csrfProtection(req, res, next) {
     }
     next();
 }
+

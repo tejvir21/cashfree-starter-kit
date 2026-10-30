@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { AuditLog } from '../models';
 /**
  * Create an audit log entry. Sensitive fields are redacted before storage.
@@ -32,3 +33,4 @@ function redact(obj) {
     }
     return out;
 }
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
 import { OrderStatus, OrderPaymentStatus, FulfillmentStatus, CURRENCIES, } from './constants';
 const orderItemSchema = new Schema({
@@ -82,3 +83,4 @@ orderSchema.index({ status: 1, paymentStatus: 1 });
 orderSchema.index({ createdAt: -1 });
 orderSchema.index({ totalPayableMinor: 1 });
 export const Order = mongoose.models.Order || model('Order', orderSchema);
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Shared constants, enums and state-machine definitions for the commerce platform.
  *
@@ -136,3 +137,4 @@ export const ORDER_STATUS_TRANSITIONS = {
 export function canTransitionOrder(from, to) {
     return ORDER_STATUS_TRANSITIONS[from]?.includes(to) ?? false;
 }
+

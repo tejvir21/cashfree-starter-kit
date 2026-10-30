@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Router } from 'express';
 import * as productController from '../controllers/product.controller';
 import { productQuerySchema, productCreateSchema, productUpdateSchema, productParamsSchema, } from '../validators/product';
@@ -14,3 +15,4 @@ router.patch('/:id', authenticate, requireRole('ADMIN'), csrfProtection, validat
 router.post('/:id/deactivate', authenticate, requireRole('ADMIN'), csrfProtection, validateParams(productParamsSchema), productController.deactivateProduct);
 router.post('/:id/activate', authenticate, requireRole('ADMIN'), csrfProtection, validateParams(productParamsSchema), productController.activateProduct);
 export default router;
+

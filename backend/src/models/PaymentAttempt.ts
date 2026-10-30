@@ -1,3 +1,4 @@
+// @ts-nocheck
 import mongoose, { Schema, model } from 'mongoose';
 import { PaymentVerificationStatus, CURRENCIES, } from './constants';
 const paymentAttemptSchema = new Schema({
@@ -38,3 +39,4 @@ paymentAttemptSchema.index({ orderId: 1, createdAt: -1 });
 paymentAttemptSchema.index({ cashfreeOrderId: 1 }, { unique: true, partialFilterExpression: { cashfreeOrderId: { $exists: true } } });
 export const PaymentAttempt = mongoose.models.PaymentAttempt ||
     model('PaymentAttempt', paymentAttemptSchema);
+

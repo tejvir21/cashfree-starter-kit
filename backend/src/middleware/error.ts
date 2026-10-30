@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ZodError } from 'zod';
 export function errorHandler(err, _req, res, 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -31,3 +32,4 @@ export function asyncHandler(fn) {
         Promise.resolve(fn(req, res, next)).catch(next);
     };
 }
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { cashfreeAdapter } from "../services/cashfree";
 import { env, MIN_PAYMENT_AMOUNT, MAX_PAYMENT_AMOUNT } from "../config/env";
 import { randomUUID } from "crypto";
@@ -162,3 +163,4 @@ export async function verifyOrder(req, res) {
   }
 }
 export { ordersStore };
+

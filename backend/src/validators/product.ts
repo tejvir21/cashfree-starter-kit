@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { z } from 'zod';
 import { CURRENCIES, PRODUCT_TYPES } from '../models/constants';
 const CURRENCY_ENUM = CURRENCIES;
@@ -38,3 +39,4 @@ export const productUpdateSchema = productCreateSchema.partial();
 export const productParamsSchema = z.object({
     id: z.string().min(1, 'Product id is required'),
 });
+

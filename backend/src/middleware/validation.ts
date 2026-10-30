@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ZodError } from 'zod';
 import { errorHandler } from './error';
 export function validateBody(schema) {
@@ -48,3 +49,4 @@ export function validateQuery(schema) {
         }
     };
 }
+

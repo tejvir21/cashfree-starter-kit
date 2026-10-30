@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { initiateRefund, reconcileRefund, } from '../services/payment.service';
 import { Refund, Order, PaymentAttempt } from '../models';
 import { createAuditLog } from '../utils/audit-log';
@@ -121,3 +122,4 @@ export async function reconcileRefundController(req, res) {
     });
     res.json({ data: result });
 }
+

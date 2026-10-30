@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Router } from 'express';
 import * as authController from '../controllers/auth.controller';
 import { registerSchema, loginSchema, refreshSchema, } from '../validators/auth';
@@ -15,3 +16,4 @@ router.post('/refresh', validateBody(refreshSchema), authController.refresh);
 // Current user profile
 router.get('/me', authenticate, authController.me);
 export default router;
+

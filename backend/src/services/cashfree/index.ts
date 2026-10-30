@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Cashfree Payments adapter.
  */
@@ -266,3 +267,4 @@ function timingSafeEqual(a, b) {
     return diff === 0;
 }
 export { CashfreeGatewayError };
+

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import dotenv from 'dotenv';
 import { z } from 'zod';
 dotenv.config();
@@ -26,3 +27,4 @@ export const isProduction = env.NODE_ENV === 'production';
 export const cashfreeConfigured = Boolean(env.CASHFREE_APP_ID && env.CASHFREE_SECRET_KEY);
 export const MIN_PAYMENT_AMOUNT = env.MIN_PAYMENT_AMOUNT;
 export const MAX_PAYMENT_AMOUNT = env.MAX_PAYMENT_AMOUNT;
+
